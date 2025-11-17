@@ -22,6 +22,7 @@ services:
     volumes:
       - ./server/src:/usr/src/app/src
       - ./server/node_modules:/usr/src/app/node_modules
+    command: sh -c "npm ci && npm run dev"
     depends_on:
       db:
         condition: service_started
@@ -38,7 +39,7 @@ services:
       NODE_ENV: development
     stdin_open: true
     tty: true
-    command: npm start
+    command: sh -c "npm i --force && npm start"
     depends_on:
       db:
         condition: service_started
