@@ -1,0 +1,7 @@
+{
+  "short_name": "City Bikes Explorer",
+  "name": "City Bikes Explorer",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+}
